@@ -1,0 +1,28 @@
+<body>
+  <div class="box">
+    <div class="row wrap row-itens-1">
+      <div class="item">
+        <mat-card>
+          <mat-card-title>Login</mat-card-title>
+          <mat-card-subtitle>Informe os dados do seu usuário para prosseguir</mat-card-subtitle>
+          <mat-card-content>
+            <form>
+              <mat-form-field class="item-12" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput placeholder="Ex. exemplo@exemplo.com">
+              </mat-form-field>
+
+              <mat-form-field class="item-12" appearance="outline">
+                <mat-label>Senha</mat-label>
+                <input type="password" matInput>
+              </mat-form-field>
+            </form>
+          </mat-card-content>
+          <mat-card-actions>
+            <button routerLink="home" mat-raised-button color="primary">Entrar</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</body>

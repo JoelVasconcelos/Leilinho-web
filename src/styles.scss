@@ -1,0 +1,333 @@
+@mixin flex-direction-row {
+    display       : flex;
+    flex-direction: row;
+    flex-wrap     : wrap
+}
+
+@mixin flex-direction-column {
+    display       : flex;
+    flex-direction: column;
+}
+
+@mixin flex-item() {
+    flex: 0 0 auto;
+}
+
+@mixin row-itens() {
+    flex: 0 0 auto;
+}
+
+@function percentBloco($i) {
+    @return (calc($i/12)*100%);
+}
+
+@function breakRow($i) {
+    @return calc(100%/$i);
+}
+
+.row {
+    @include flex-direction-row();
+}
+
+.row>* {
+    flex-shrink: 0;
+    width      : 100%;
+    max-width  : 100%;
+}
+
+.item {
+    flex: 1 0 0%
+}
+
+.column {
+    @include flex-direction-column();
+}
+
+.row-itens-auto {
+    flex : 0 0 auto;
+    width: auto
+}
+
+@for $i from 1 through 6 {
+    .row-itens-#{$i}>* {
+        @include row-itens();
+        width: breakRow($i);
+    }
+}
+
+.item-auto {
+    flex : 1 1 auto;
+    width: auto
+}
+
+.gap {
+    column-gap: 5px;
+}
+
+@for $i from 1 through 12 {
+    .item-#{$i} {
+        @include flex-item();
+        width: percentBloco($i);
+    }
+}
+
+@media screen and (max-width:599px) {
+    .row-xs {
+        @include flex-direction-row();
+    }
+
+    .column-xs {
+        @include flex-direction-column();
+    }
+
+    .item-xs {
+        flex: 1 0 0%
+    }
+
+    .row-itens-xs-auto {
+        flex : 0 0 auto;
+        width: auto
+    }
+
+    @for $i from 1 through 6 {
+        .row-itens-xs-#{$i}>* {
+            @include row-itens();
+            width: breakRow($i);
+        }
+    }
+
+    .item-xs-auto {
+        flex: 1 1 auto
+    }
+
+    @for $i from 1 through 12 {
+        .item-#{$i}-xs {
+            @include flex-item();
+            width: percentBloco($i)
+        }
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:959px) {
+    .row-sm {
+        @include flex-direction-row();
+    }
+
+    .column-sm {
+        @include flex-direction-column();
+    }
+
+    .item-sm {
+        flex: 1 0 0%
+    }
+
+    .row-itens-sm-auto {
+        flex : 0 0 auto;
+        width: auto
+    }
+
+    @for $i from 1 through 6 {
+        .row-itens-sm-#{$i}>* {
+            @include row-itens();
+            width: breakRow($i);
+        }
+    }
+
+    .item-sm-auto {
+        flex: 1 1 auto
+    }
+
+    @for $i from 1 through 12 {
+        .item-#{$i}-sm {
+            @include flex-item();
+            width: percentBloco($i)
+        }
+    }
+}
+
+@media screen and (min-width:1280px) and (max-width:1398.98px) {
+    .row-md {
+        @include flex-direction-row();
+    }
+
+    .column-md {
+        @include flex-direction-column();
+    }
+
+    .item-md {
+        flex: 1 0 0%
+    }
+
+    .row-itens-md-auto {
+        flex : 0 0 auto;
+        width: auto
+    }
+
+    @for $i from 1 through 6 {
+        .row-itens-md-#{$i}>* {
+            @include row-itens();
+            width: breakRow($i);
+        }
+    }
+
+    .item-md-auto {
+        flex: 1 1 auto
+    }
+
+    @for $i from 1 through 12 {
+        .item-#{$i}-md {
+            @include flex-item();
+            width: percentBloco($i)
+        }
+    }
+}
+
+@media screen and (min-width:1400px) and (max-width:1919.98px) {
+    .row-lg {
+        @include flex-direction-row();
+    }
+
+    .column-lg {
+        @include flex-direction-column();
+    }
+
+    .item-lg {
+        flex: 1 0 0%
+    }
+
+    .row-itens-lg-auto {
+        flex : 0 0 auto;
+        width: auto
+    }
+
+    @for $i from 1 through 6 {
+        .row-itens-lg-#{$i}>* {
+            @include row-itens();
+            width: breakRow($i);
+        }
+    }
+
+    .item-lg-auto {
+        flex: 1 1 auto
+    }
+
+    @for $i from 1 through 12 {
+        .item-#{$i}-lg {
+            @include flex-item();
+            width: percentBloco($i)
+        }
+    }
+}
+
+@media screen and (min-width:1920px) and (max-width:5000px) {
+    .row-xl {
+        @include flex-direction-row();
+    }
+
+    .column-xl {
+        @include flex-direction-column();
+    }
+
+    .item-xl {
+        flex: 1 0 0%
+    }
+
+    .row-itens-xl-auto {
+        flex : 0 0 auto;
+        width: auto
+    }
+
+    @for $i from 1 through 6 {
+        .row-itens-xl-#{$i}>* {
+            @include row-itens();
+            width: breakRow($i);
+        }
+    }
+
+    .item-xl-auto {
+        flex: 1 1 auto
+    }
+
+    @for $i from 1 through 12 {
+        .item-#{$i}-xl {
+            @include flex-item();
+            width: percentBloco($i)
+        }
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:839.98px) and (orientation:portrait) {
+    .row-tp {
+        @include flex-direction-row();
+    }
+
+    .column-tp {
+        @include flex-direction-column();
+    }
+
+    .item-tp {
+        flex: 1 0 0%
+    }
+
+    .row-itens-tp-auto {
+        flex : 0 0 auto;
+        width: auto
+    }
+
+    @for $i from 1 through 6 {
+        .row-itens-tp-#{$i}>* {
+            @include row-itens();
+            width: breakRow($i);
+        }
+    }
+
+    .item-tp-auto {
+        flex: 1 1 auto
+    }
+
+    @for $i from 1 through 12 {
+        .item-#{$i}-tp {
+            @include flex-item();
+            width: percentBloco($i)
+        }
+    }
+}
+
+@media screen and (min-width:960px) and (max-width:1279.98px) and (orientation:landscape) {
+    .row-tl {
+        @include flex-direction-row();
+    }
+
+    .column-tl {
+        @include flex-direction-column();
+    }
+
+    .item-tl {
+        flex: 1 0 0%
+    }
+
+    .row-itens-tl-auto {
+        flex : 0 0 auto;
+        width: auto
+    }
+
+    @for $i from 1 through 6 {
+        .row-itens-tl-#{$i}>* {
+            @include row-itens();
+            width: breakRow($i);
+        }
+    }
+
+    .item-tl-auto {
+        flex: 1 1 auto
+    }
+
+    @for $i from 1 through 12 {
+        .item-#{$i}-tl {
+            @include flex-item();
+            width: percentBloco($i)
+        }
+    }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
