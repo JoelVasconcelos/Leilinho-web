@@ -1,3 +1,13 @@
 mat-toolbar {
-    background-color: rgb(172, 103, 14) !important;
+    background-color: rgb(54, 167, 105) !important;
+}
+
+.container {
+    height: 100vh;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    align-items: center;
 }

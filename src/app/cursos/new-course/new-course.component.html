@@ -1,0 +1,52 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+  <mat-card>
+    <div class=" row row-itens-2">
+
+      <mat-card-title class="item-12">Adicionar novo curso</mat-card-title>
+
+      <mat-form-field class="item gap" appearance="outline">
+        <mat-label>Nome do curso</mat-label>
+        <input matInput placeholder="Informe o nome do novo curso" formControlName="nome">
+      </mat-form-field>
+
+      <mat-form-field class="item" appearance="outline">
+        <mat-label>Professor</mat-label>
+        <mat-select formControlName="professor">
+          <mat-option value="Rafael Henry Benedito Fernandes">Rafael Henry Benedito Fernandes</mat-option>
+          <mat-option value="Nathan Thales Anthony Assunção">Nathan Thales Anthony Assunção</mat-option>
+          <mat-option value="Carlos Edson Rocha">Carlos Edson Rocha</mat-option>
+          <mat-option value="Bernardo Otávio da Cunha">Bernardo Otávio da Cunha</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="item gap" appearance="outline">
+        <mat-label>Turno</mat-label>
+        <mat-select formControlName="turno">
+          <mat-option value="Matutino">Matutino</mat-option>
+          <mat-option value="Vespertino">Vespertino</mat-option>
+          <mat-option value="Noturno">Noturno</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="item-3 gap" appearance="outline">
+        <mat-label>Início do curso</mat-label>
+        <input type="date" matInput formControlName="dataInicio">
+      </mat-form-field>
+
+      <mat-form-field class="item-3" appearance="outline">
+        <mat-label>Término do curso</mat-label>
+        <input type="date" matInput formControlName="dataFim">
+      </mat-form-field>
+
+      <mat-form-field class="item-12" appearance="outline">
+        <mat-label>Descrição do curso</mat-label>
+        <textarea matInput rows="4" matInput formControlName="descricao"></textarea>
+      </mat-form-field>
+    </div>
+
+    <mat-card-actions>
+      <button type="submit" mat-raised-button>Adicionar curso</button>
+    </mat-card-actions>
+
+  </mat-card>
+</form>

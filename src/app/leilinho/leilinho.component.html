@@ -6,10 +6,8 @@
     <h1>Leilinho</h1>
     <span class="menu-spacer"></span>
     <div>
-      <a mat-button routerLink='/accounts'> Home </a>
-      <a mat-button routerLink='/create-account'> Praças </a>
-      <a mat-button routerLink='/contacts'> Produtos </a>
-      <a mat-button routerLink='/create-contact'> Usuário </a>
+      <a mat-button routerLink='produto'> Produtos </a>
+      <a mat-button routerLink='usuario'> Usuário </a>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
@@ -28,9 +26,11 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div style="height: 88vh;">
 
-      <router-outlet></router-outlet>
+    <div class="container">     
+        <router-outlet></router-outlet>
     </div>
+
+
   </mat-sidenav-content>
 </mat-sidenav-container>

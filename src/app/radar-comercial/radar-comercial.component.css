@@ -1,0 +1,18 @@
+mat-toolbar {
+    background-color: #1F1E5A !important;
+}
+
+.container {
+    height: 100vh;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    padding: 5px;
+    align-items: center;
+}
+
+.menu-topnav {
+    margin-left: auto;
+    margin-right: 60%;
+}

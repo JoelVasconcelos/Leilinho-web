@@ -1,7 +1,20 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.box {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin flex-direction-row {
     display       : flex;
     flex-direction: row;
-    flex-wrap     : wrap
+    flex-wrap     : wrap;
 }
 
 @mixin flex-direction-column {
@@ -60,15 +73,16 @@
     width: auto
 }
 
-.gap {
-    column-gap: 5px;
-}
-
 @for $i from 1 through 12 {
     .item-#{$i} {
         @include flex-item();
         width: percentBloco($i);
     }
+}
+
+.gap {
+    box-sizing    : border-box;
+    border-right  : 5px solid rgb(255, 255, 255);
 }
 
 @media screen and (max-width:599px) {
@@ -105,6 +119,10 @@
             @include flex-item();
             width: percentBloco($i)
         }
+    }
+    .gap-xs {
+        box-sizing    : border-box;
+        border-right  : 5px solid rgb(255, 255, 255);
     }
 }
 
@@ -143,6 +161,10 @@
             width: percentBloco($i)
         }
     }
+    .gap-sm {
+        box-sizing    : border-box;
+        border-right  : 5px solid rgb(255, 255, 255);
+    }
 }
 
 @media screen and (min-width:1280px) and (max-width:1398.98px) {
@@ -179,6 +201,10 @@
             @include flex-item();
             width: percentBloco($i)
         }
+    }
+    .gap-md {
+        box-sizing    : border-box;
+        border-right  : 5px solid rgb(255, 255, 255);
     }
 }
 
@@ -217,6 +243,10 @@
             width: percentBloco($i)
         }
     }
+    .gap-lg {
+        box-sizing    : border-box;
+        border-right  : 5px solid rgb(255, 255, 255);
+    }
 }
 
 @media screen and (min-width:1920px) and (max-width:5000px) {
@@ -253,6 +283,10 @@
             @include flex-item();
             width: percentBloco($i)
         }
+    }
+    .gap-xl {
+        box-sizing    : border-box;
+        border-right  : 5px solid rgb(255, 255, 255);
     }
 }
 
@@ -291,6 +325,10 @@
             width: percentBloco($i)
         }
     }
+    .gap-tp {
+        box-sizing    : border-box;
+        border-right  : 5px solid rgb(255, 255, 255);
+    }
 }
 
 @media screen and (min-width:960px) and (max-width:1279.98px) and (orientation:landscape) {
@@ -328,6 +366,12 @@
             width: percentBloco($i)
         }
     }
+    .gap-tl {
+        box-sizing    : border-box;
+        border-right  : 5px solid rgb(255, 255, 255);
+    }
 }
+
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

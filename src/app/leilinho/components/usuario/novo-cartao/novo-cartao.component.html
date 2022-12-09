@@ -1,0 +1,71 @@
+<app-title>Cadastro de cartão de pagamento</app-title>
+
+<div class="row wrap row-itens-2">
+	<div class="item">
+		<form>
+			<mat-card>				
+				<mat-card-subtitle>Confira os dados antes de gravar</mat-card-subtitle>
+				<mat-card-content>
+					<div class="row wrap row-itens-2">
+						<mat-form-field class="item-12" appearance="outline">
+							<mat-label>Nome no cartão</mat-label>
+							<input matInput placeholder="Ex. AIRTON SENNA DA SILVA"
+								(keyup)="cardName = $any($event.target).value">
+						</mat-form-field>
+
+						<mat-form-field class="item-12" appearance="outline">
+							<mat-label>Número do cartão</mat-label>
+							<input matInput type="text" placeholder="Ex. 1234 5678 9999 0000"
+								(keyup)="cardNumber = $any($event.target).value; mcc(cardNumber)" MAXLENGTH=16>
+						</mat-form-field>
+
+						<mat-form-field class="item-6 gap" appearance="outline">
+							<mat-label>Validade</mat-label>
+							<input matInput type="date" placeholder="Ex. 01/03/2023">
+						</mat-form-field>
+
+						<mat-form-field class="item-6" appearance="outline">
+							<mat-label>CVC</mat-label>
+							<input matInput placeholder="Ex. 123" (keyup)="CVC = $any($event.target).value" MAXLENGTH=3>
+						</mat-form-field>
+					</div>
+				</mat-card-content>
+				<mat-card-actions>
+					<button mat-raised-button routerLink="/usuario">Salvar</button>
+				</mat-card-actions>
+			</mat-card>
+		</form>
+	</div>
+
+	<div class="item credit-card">
+		<div class="card">
+			<div class="face front absolute">
+				<img src="./assets/chip.svg" alt="Chip" id="chip" class="absolute">
+				<img src="./assets/signal.svg" alt="Signal" id="signal" class="absolute">
+				<!-- <img src="./assets/img/leilinho_card.png" alt="Logo" id="logo" class="absolute"> -->
+				<p id="owner" class="absolute">{{cardName | uppercase}}</p>
+
+			</div>
+			<div class="face back absolute">
+				<div id="graybar" class="absolute"></div>
+				<div id="card-info" class="absolute">
+					<p id="card-number">{{cardNumber}}</p>
+					<div class="flex">
+						<p class="flex informations">
+							<span class="label">MEMBER SINCE</span>
+							<span>01/01</span>
+						</p>
+						<p class="flex informations">
+							<span class="label">VALID THRU</span>
+							{{validity}}
+						</p>
+						<p class="flex informations">
+							<span class="label">SECURITY CODE</span>
+							<span>{{CVC}}</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

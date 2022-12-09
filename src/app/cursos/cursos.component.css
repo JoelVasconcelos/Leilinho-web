@@ -1,0 +1,31 @@
+.title {
+    margin-left: 20px;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.mat-divider {
+    padding: 15px;
+}
+
+.table {
+    width: 70%;
+
+}
+
+mat-toolbar {
+    background-color: rgb(133, 42, 98) !important;
+    color: white;
+}
+
+.container {
+    height: 100vh;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    align-items: center;
+}

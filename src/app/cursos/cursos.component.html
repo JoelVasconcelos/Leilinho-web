@@ -1,0 +1,30 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">computer</mat-icon>
+    </button>
+    <h1>Cursos online</h1>
+    <span class="menu-spacer"></span>
+    <div class="menu-topnav">
+      <!-- <a mat-button routerLink='/accounts'> Dashboard </a> -->
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a mat-list-item routerLink='/home'> Retornar a Seleção de interface </a>
+      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="container">      
+      <router-outlet>
+        <app-new-course></app-new-course>
+        <app-courses-list></app-courses-list>
+      </router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

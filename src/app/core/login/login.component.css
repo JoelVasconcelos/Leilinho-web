@@ -1,6 +1,6 @@
 body {
     background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 3%, rgb(122, 190, 211) 57%, rgba(2, 0, 36, 1) 100%);
+    background: linear-gradient(90deg, rgb(86, 160, 86) 3%, rgb(82, 185, 57) 57%, rgb(14, 119, 14) 100%);
 }
 
 .box {
@@ -10,4 +10,22 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+mat-card {
+    width: 350px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    width: 350px;
+}
+
+h3 {
+    font:x-large;
+    width: 350px;
+    font-weight: bold;
+    color: white;
 }
